@@ -123,8 +123,8 @@
   .boxes h2:hover {
     background: #d3d3d3;
     color: #85cdfa;
-    font-style: italic;
-  }
+    font-style: italic;    
+  }  
   /* task8  */
   .heading h2{
     color: #87cefa;
@@ -221,6 +221,6 @@
     left: 0;
     position: absolute;    
     border-right: 45px solid transparent;
-    border-top: 45px solid #76cdd7 ;
+    border-top: 45px solid #87cefa;
   }
 }
