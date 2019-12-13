@@ -1,0 +1,236 @@
+@mixin button {
+  background: $colorButton;
+  height: 40px;
+  width: 130px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;  
+  border-radius: 3px;
+  cursor: pointer; 
+}
+@mixin logo {
+  padding-top: 30px;
+  width: 50px;
+  height: 50px;
+}
+@mixin logoTextStyle {
+  font-weight: map-get($fontWeights, "medium");
+  font-size: 25px;
+  margin-top: 30px;
+  padding-left:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin fontFamily($fontFamily, $colorText) {
+  font-family:$fontFamily;
+  color: $colorText;  
+}
+$fontWeights: ("medium": 600, "bold": 700);  
+body {    
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $backgroundBody;
+}
+header {  
+  background-image: $backgroundHeader; 
+  background-size: cover; 
+  height: 120vh;
+  border-bottom-right-radius: 600px 300px;
+}
+.header-wrap {  
+  padding-right: 700px; 
+  padding-left: 130px;
+  .landing-logo {
+    padding-top: 20px;
+    display: flex;
+    img {
+      @include logo;
+    }
+    p {      
+      @include logoTextStyle;      
+      @include fontFamily($fontParagraph, $colorHeaderText);
+      span{
+        font-size: 10px; 
+        margin-top: $marginTopSpan;
+      }
+    }  
+  }
+  .header_heading {
+    @include fontFamily($fontHeader, $colorHeaderText);    
+    font-size: 70px;
+    font-weight: map-get($fontWeights, "bold");
+    position: relative;
+    z-index: 2;    
+    &:after {
+      content: '';
+      background-color: $colorUnderline;
+      display: block;
+      height: 50px;
+      width: 295px;
+      z-index: -1;
+      position: absolute;
+      bottom: 10px;      
+    }
+  }  
+  .header_text {
+    @include fontFamily($fontParagraph, $colorHeaderText);    
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .header_button {
+    @include button;
+    margin-top: 30px; 
+    margin-right: 100px;      
+  }
+  .header_button:hover {
+    background: darken($colorButton, 5%);
+  }
+  .login {
+    @include fontFamily($fontParagraph, #ffffff);
+  }
+}
+.section_text {
+  @include fontFamily($fontHeader, $colorHeaderText);
+  font-size: 35px;
+  text-align: center;
+  font-weight: map-get($fontWeights, "medium");
+  position: relative;
+  &:after {
+    content: '';
+    background-color: $colorUnderline;
+    display: block;
+    height: 45px;
+    width: 155px;
+    z-index: -1;
+    position: absolute;
+    bottom: 8px;
+    margin-left: 683px;
+  }  
+}
+.section_card_wrap {
+  display: flex;
+  flex-direction: column;  
+}
+.section_card {
+  background: $backgroundHeaderCard;
+  margin: 5px;
+  padding: 10px 40px 10px 10px;
+  margin: 10px auto;
+  display: flex;        
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  width: 700px;
+  img[alt="experts"], 
+  img[alt="certificate"] {
+    border-radius: 5px;
+    width: 310px;
+    margin: 5px ;       
+  } 
+  img[alt="content formats"] {
+    border-radius: 5px;
+    width: 300px;
+    margin: 5px ;
+  }  
+  .section_card_right_container {
+    text-align: center;
+    .section_card_heading {
+      @include fontFamily($fontHeader, #ffffff);
+      font-weight: map-get($fontWeights, "medium");
+      font-size: 20px;
+      margin: 5px 0 32px 0;  
+    }
+    .section_card_text { 
+      @include fontFamily($fontParagraph, $colorParagraph);  
+      margin: 5px 10px 10px 10px;
+      text-align: center;
+      font-size: $fontSizeCardText;
+      line-height: 1.5;
+      width: 350px;
+      text-align: justify;
+    }
+    .section_link {
+      @include fontFamily($fontLink, $colorParagraph);
+      font-size: 12px;
+    }
+  }
+}
+.section_card_wrap :nth-child(2) .section_card_right_container .section_card_text {
+  width: 360px;
+}
+.section_banner {
+  position: relative;
+  bottom: -60px;
+  display: flex;
+  justify-content: space-around;  
+  width: 825px;
+  height: 120px;
+  background: #629237;
+  background: linear-gradient(90deg, $colorBackgroundLinear1 29%, $colorBackgroundLinear2 100%);
+  margin: 100px auto 0 auto;
+  border-radius: 7px;
+  .section_banner_heading {
+    @include fontFamily($fontHeader, $colorHeaderText);      
+    font-weight: map-get($fontWeights, "bold");      
+    font-size: 25px;
+    margin: 20px 0 15px 0;
+    z-index: 1;
+    position: relative;
+    &::after {
+      content: '';
+      background-color: $colorUnderline;
+      display: block;
+      height: 40px;
+      width: 51px;
+      z-index: -1;
+      position: absolute;
+      top: -10px;
+      margin-left: 102px;                        
+    }
+  }
+  .section_banner_text {
+    margin: 3px 0;
+    @include fontFamily($fontParagraph, #c0b6b9);      
+    font-size: 14px;
+  }
+  .section_banner_button {  
+    @include button;
+    margin-top: 40px;    
+  }
+  .section_banner_button:hover {
+    background: darken($colorButton, 5%);
+  }
+}
+.footer-wrap {
+  height: 250px;
+  background: $backgroundHeaderCard;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .footer_logo {    
+    padding-top: 0;
+    display: flex;
+    img {
+      @include logo;
+    }
+    p {
+      @extend .footer-cr;
+      @include logoTextStyle;
+      span {        
+        font-size: 10px; 
+        margin-top: $marginTopSpan;
+      }
+    }
+  }
+  .footer_text {
+    font-size: 12px;
+    width: 250px;
+    @include fontFamily($fontParagraph, $colorParagraph);
+    line-height: 1.5;
+  }
+  .footer-cr {
+    @include fontFamily($fontParagraph, $colorParagraph);
+  }
+}      
