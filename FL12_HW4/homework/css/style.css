@@ -6,11 +6,11 @@
 .main-wrapper {
   width: 100%;  
 }
-header{
+header {
   background-image: url('../img/home-bg.jpg');
   background-repeat: no-repeat;
-  height: 100vh;
   background-size: cover;
+  height: 100vh;  
   display: flex;
   justify-content: center;
 }
@@ -26,11 +26,9 @@ header{
 .logo-title {
   color: #777;
   text-transform: uppercase;
-  font-size: 20px;
-  font-family: 'Bree Serif', serif;
+  font-size: 20px;  
   letter-spacing: 3px;  
 }
-/* rgb(211, 164, 119) */
 .navigation-row {
   width: 100%;
   list-style: none;
@@ -44,7 +42,7 @@ header{
   color: #777;
   text-decoration: none;
 }
-.navigation-link a:hover{
+.navigation-link a:hover {
   color: #bfba55; 
 }
 .greeting{
@@ -53,7 +51,6 @@ header{
 }
 .greeting-header {
   color: #ffffff;
-  font-family: 'Bree Serif', serif;
   font-size: 60px;
   font-weight: 500;
 }
@@ -62,9 +59,9 @@ header{
   color: #bfba55;
 }
 .greeting-btn {
-  font-family: 'Bree Serif', serif;
   color: #777;
-  padding: 10px 20px;
+  font-size: 10px;
+  padding: 12px 25px;
   border-radius: 25px;
   text-transform: uppercase;
   border: none;
@@ -78,12 +75,11 @@ header{
   flex-direction: column;
   align-items: center;
 }
-article, article img{
-  width: 700px;
+article, article img {
+  width: 800px;
   margin-top: 10px;
 }
 .post-header {
-  font-family: 'Bree Serif', serif;
   font-weight: 500;
 }
 .post-comment {
@@ -91,7 +87,7 @@ article, article img{
   align-items: center;  
   width: 350px;
 }
-.comments-author{
+.comments-author {
   height: 25px;
   width: 25px;
   border-radius: 12px;
@@ -100,7 +96,6 @@ article, article img{
   margin: 20px 0;
 }
 .post-btn {
-  font-family: 'Bree Serif', serif;
   color: #777;
   padding: 10px 20px;
   border-radius: 25px;
@@ -108,9 +103,40 @@ article, article img{
   background: #ffffff;  
 }
 hr {
-  width: 700px;
+  width: 800px;
   margin: 40px 0;  
   border: none;  
   background-color: #f0f0f0; 
   height: 1px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  height: 250px;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;  
+  width: 800px;
+}
+.describe-header, .contact-header {
+  color: #ffffff; 
+  margin-bottom: 10px; 
+}
+.describe p, 
+.describe span {
+  color: #777;
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+.describe span {
+  font-size: 13px;
+}
+.contact p {
+  margin-right: 20px;
+  line-height: 2.4em;
+  font-size: 13px;
+  color: #777;
 }
