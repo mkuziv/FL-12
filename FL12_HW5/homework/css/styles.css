@@ -1,0 +1,328 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+} */
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #9d27b0;
+}
+.post-2 {
+	background: #9bb800;
+}
+.post-3 {
+	background: #ed5120;
+}
+.post-4 {
+	background: #9d27b0;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: roboto;
+  background: #0b192f;
+  display: flex;
+  justify-content: center;
+}
+.main-content {
+  max-width: 1300px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #024161;
+}
+h1 {
+  font-weight: 200;
+  padding: 10px 15px;
+  font-size: 30px;
+  color: #fff;
+}
+.header-text span {
+  color:#d12865;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+a {
+  display: block;  
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #fff;
+}
+li a:hover {
+  background: #1f52a4;  
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin:10px 0;
+}
+.first-section {
+  width: 100%;
+  height: 400px;
+  background-image: url("../img/post0.jpg"); 
+  background-size: cover;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.first-section-post {
+  width: 70%;
+  flex-direction: column;
+  margin: 30px 20px;
+}
+.section-second {
+  display: flex;
+  margin:10px 0;
+}
+.section {
+  margin-right: 1%;
+  width: 72%;
+}
+article { 
+  display: flex;
+  color: #fff;
+} 
+article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.picture {
+  height: 300px;
+  display: flex;
+  flex: 0.99;
+}
+article img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+article img:hover {
+  filter: opacity(50%);
+}
+.post-column .post {
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1.01;  
+}
+.post-only {
+  display: flex;
+  flex-direction: row-reverse;
+}
+article:nth-child(even) .post {
+  flex-direction: row;  
+}
+.post-description-header:hover {
+  filter: opacity(50%);
+}
+.post-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 2%;  
+}
+article:nth-child(even) .post-date {
+  align-items: flex-start;
+}
+.post-description {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 2%; */
+  margin-bottom: 1%;  
+}
+article:nth-child(odd) .post-description{
+  padding-left: 5%;
+}
+article:nth-child(even) .post-description {
+  text-align: right;
+  padding-right: 5%;
+}
+.post-date span {
+  font-size: 50%;
+  font-weight: 200; 
+  display: block;
+  margin-top: -15px; 
+}
+.first-section-header, 
+.post-description-header {
+  padding-top: 3%;
+  font-size: 220%;
+  font-weight: 200;  
+}
+.post-description-header {
+  cursor: pointer;
+}
+
+.first-section-article, 
+.post-description-article, 
+.news-description-article,
+.post-date p {  
+  padding-top: 2%;
+  filter: opacity(70%);
+  font-size: 80%; 
+  line-height: 1.5em;
+  font-weight: 200;
+}
+.post-date p {
+  font-size: 220%;
+  font-weight: 200;
+  filter: opacity(70%);
+}
+aside {
+  background: #0b192f; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  height: 50%;
+}
+.news-img {
+  margin-bottom: 4%;
+  background: #fff;
+}
+.news-img img {
+  height: 100%;
+  width: 100%;  
+}
+.news-description {
+  padding: 5% 10%;
+}
+h3 {
+  font-size: 120%;
+  font-weight: 200;
+}
+.news-description p {
+  color: rgb(99, 118, 147);
+}
+footer {
+  background: #024161;
+  display: flex;
+  justify-content: space-between;
+  color: #3b6a8a;
+  padding: 20px 10px;
+  margin-bottom: 1%;
+}
+@media screen and (max-width: 1400px) {
+  body {    
+    padding: 0 10%;
+  }
+  .main-content {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 1%;
+  }
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .first-section {
+    height: 300px;
+  }
+  .first-section-post {
+    width: 90%;
+  }
+  h1 {
+    padding: 50px 0;
+  }
+  nav li {
+    display: none;
+  }
+  nav::before {
+    position: absolute;
+    content: "\2630";
+    color: #fff;
+    margin: 10px 0;
+  }
+  .section {
+    width: 60%;
+  }
+  aside {
+    width: 39%;
+    background: #0b192f;
+  }
+  article {
+    height: auto;
+  }  
+  article, article:nth-child(even) {
+    flex-direction: column;
+  }
+  article:nth-child(even) .post {
+    flex-direction: row-reverse;    
+  }  
+  .post, 
+  .post-only {    
+    padding: 5% 10%;
+  }
+  .post-only {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .post-description {
+    text-align: left;    
+  }
+  article:nth-child(odd) .post-description {
+    padding-left: 0;
+  }
+  article:nth-child(even) .post-description {
+    text-align: left;
+    padding-right: 0;
+  }
+  .news-img {
+    background: #fff;
+    padding-bottom: 4%;
+    margin-bottom: 4%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }  
+}
+@media screen and (max-width: 480px) {
+  body {    
+    padding: 0 1%;
+  }
+  header {
+    margin-bottom: 3%;
+  }
+  main {
+    flex-direction: column;
+    margin: 0;
+  }
+  .section-second {
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    background: #0b192f;
+  }
+  .news-description {
+    padding: 5% 4%;
+  }
+}
