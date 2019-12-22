@@ -145,10 +145,9 @@ article:nth-child(even) .post-date {
 .post-description {
   display: flex;
   flex-direction: column;
-  /* padding: 0 2%; */
   margin-bottom: 1%;  
 }
-article:nth-child(odd) .post-description{
+article:nth-child(odd) .post-description {
   padding-left: 5%;
 }
 article:nth-child(even) .post-description {
@@ -170,7 +169,6 @@ article:nth-child(even) .post-description {
 .post-description-header {
   cursor: pointer;
 }
-
 .first-section-article, 
 .post-description-article, 
 .news-description-article,
