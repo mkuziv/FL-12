@@ -73,7 +73,7 @@ function getArrayOfKeys(arr, name) {
   executeforEach(arr, function (item) {
     array.push(item[name]);
   });
-  
+
   return array;  
 }
 
@@ -107,12 +107,11 @@ function getPastDay(date, day) {
 //task10
 function formatDate(date) {  
   if (!date) {         
-    let today = new Date();
-    let time = today.toLocaleString('en-GB', { hour: '2-digit', minute: '2-digit' });
-    
-    return `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()} ${time}`
+    date = new Date();
   }
-  let time = date.toLocaleString('en-GB', { hour: '2-digit', minute: '2-digit' });  
+  let a = 10;
+  let minute = date.getMinutes() < a ? '0' + date.getMinutes() : date.getMinutes();
+  let hour = date.getHours() < a ? '0' + date.getHours() : date.getHours();  
   
-  return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} ${time}`;
+  return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} ${hour}:${minute}`;
 }
