@@ -9,6 +9,7 @@ li {
 
 span:hover {
   background: #efefef;
+  cursor: pointer;
 }
 span i {
   vertical-align: bottom;
