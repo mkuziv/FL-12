@@ -4,23 +4,23 @@ li {
 
 .folder-list {
   display: flex;
-  flex-direction: column; 
-  justify-content: center;   
-  list-style: none;
+  flex-direction: column;
 }
 
-.folder-list:hover {
-    background: #efefef;
+span:hover {
+  background: #efefef;
+}
+span i {
+  vertical-align: bottom;
 }
 
-.icon {
-    
-    margin-right: 5px;
-    color: #edbc0b;
+.icon {    
+  margin-right: 5px;
+  color: #edbc0b;
 }
 
 .file-icon {
-    color: #9b9a99;
+  color: #9b9a99;
 }
 
 li.closed ul {
