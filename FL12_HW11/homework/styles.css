@@ -1,0 +1,28 @@
+li {
+  list-style: none;
+}
+
+.folder-list {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;   
+  list-style: none;
+}
+
+.folder-list:hover {
+    background: #efefef;
+}
+
+.icon {
+    
+    margin-right: 5px;
+    color: #edbc0b;
+}
+
+.file-icon {
+    color: #9b9a99;
+}
+
+li.closed ul {
+  display: none;
+}
