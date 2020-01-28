@@ -131,12 +131,15 @@ saveButton.addEventListener('click', () => {
 
     setNameRow.remove();
     amount--;
-
     if(amount === zero){
       emptyList.style.display = 'block';
     }
-
   });
+
+  if (setNameText.textContent === ''){
+    setNameRow.remove();
+    amount--;
+  } 
 
   setListEdit.addEventListener('click', () => {    
     
@@ -167,4 +170,7 @@ saveButton.addEventListener('click', () => {
 
   setList.style.display ='block';  
   addNameInput.value = '';
+  if(amount === zero){
+    emptyList.style.display = 'block';
+  }
 });
