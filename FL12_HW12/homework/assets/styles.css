@@ -1,0 +1,59 @@
+* {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+#root {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 20px;
+}
+
+.wrapper {
+  min-height: 400px;
+}
+.wrapper, .main-page, .add-set  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.main-header, .add-set-header {
+  margin: 15px 0;  
+}
+
+.add-button, .cancel, 
+.save, .add-term {
+  padding: 3px 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+.add-button {
+  float: right;
+}
+.empty-list{
+  margin: 10px 0;
+}
+.list-of-set {
+  display: none;
+  list-style-type: none;
+  width: 200px;
+  margin: 10px 0;
+}
+.set-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2px 0;
+}
+
+.add-set {
+  display: none;
+}
+.add-name-input{
+  border-radius: 5px;
+  padding: 3px 15px;
+} 
