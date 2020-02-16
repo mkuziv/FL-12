@@ -1,0 +1,70 @@
+@import 'variables.less';
+* {
+  box-sizing: border-box;
+}
+.nav-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  &__text {  
+    line-height: 2.2;
+    font-weight: 500;
+    color: @colorGrey; 
+  }
+  &__link {
+    &--active {
+      background: @colorBlue
+    }
+  }
+}
+
+.main-block {
+  &__header, 
+  &__sub-header {
+    color: @colorBlue;
+  }
+  &__line {
+    border: 0.5px solid @colorBlue;
+    margin-top: 5px;
+  }
+}
+
+.bg-red {
+  background-color: @colorRed;
+  border-color: @colorRed;
+}
+
+.bg-blue {
+  background-color: @colorBlue;
+  border-color: @colorBlue;
+}
+
+.bg-orange {
+  background-color: @colorOrange;
+  border-color: @colorOrange;
+}
+
+.bg-green {
+  background-color: @colorGreen;
+  border-color: @colorGreen;
+}
+
+.footer{
+  height: 51px;
+  background-color: @colorGrey;
+}
+@media (max-width: 991.98px) {
+  .main-block__description {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  main .container, footer .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
