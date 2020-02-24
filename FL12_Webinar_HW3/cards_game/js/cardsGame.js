@@ -17,18 +17,15 @@ class Card {
       return true;
     } else if (cardTwo.rank === rank[0]) {
       return false;
-    } 
-    else if (rank.indexOf(cardOne.rank) > rank.indexOf(cardTwo.rank)) {
+    } else if (rank.indexOf(cardOne.rank) > rank.indexOf(cardTwo.rank)) {
       return true;
     } else if((rank.indexOf(cardOne.rank) < rank.indexOf(cardTwo.rank))) {
       return false;
     } else {
-      return 'draw'
-    }
-    
+      return 'draw';
+    }    
   }
 }
-
 
 class Deck {
   constructor() {
@@ -76,6 +73,7 @@ class Player {
     PlayerOne.deck.shuffle();
     PlayerTwo.deck.generateDeck(suit, rank);
     PlayerTwo.deck.shuffle();
+
     for (let i = PlayerOne.deck.count - 1; i >= 0; i--) {
       if (Card.compare(PlayerOne.deck.deck[i], PlayerTwo.deck.deck[i]) === 'draw') {
         continue;        
@@ -84,6 +82,7 @@ class Player {
       } else {
         PlayerTwo.wins++
       }
+
       console.log(PlayerOne.deck.deck[i]._toString());
       console.log(PlayerTwo.deck.deck[i]._toString());
       PlayerOne.deck.draw(1);
@@ -91,20 +90,22 @@ class Player {
       console.log('1', PlayerOne.wins);
       console.log('2', PlayerTwo.wins);
     }
+
     if (PlayerOne.wins > PlayerTwo.wins){
       console.log(`${PlayerOne.name} wins ${PlayerOne.wins} to ${PlayerTwo.wins}`);
+    } else if (PlayerOne.wins < PlayerTwo.wins) {
+      console.log(`${PlayerTwo.name} wins ${PlayerTwo.wins} to ${PlayerOne.wins}`);
     } else {
-      console.log(`${PlayerTwo.name} wins ${PlayerOne.wins} to ${PlayerTwo.wins}`);
+      console.log('The score is equal')
     }
+
   }
 }
-
 
 let deck1 = new Deck();
 let deck2 = new Deck();
 
-let player1 = new Player('Jhon', 0, deck1)
-let player2 = new Player('Pete', 0, deck2)
+let player1 = new Player('Jhon', 0, deck1);
+let player2 = new Player('Pete', 0, deck2);
 
 Player.Play(player1, player2);
-
