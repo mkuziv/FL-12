@@ -1,10 +1,10 @@
 //task1
-const arr1 = [1, 7, 789, 2, 358, 512, 675, 78, 125, 9, 3, ]
+const arr1 = [1, 7, 789, 2, 358, 512, 675, 78, 125, 9, 3];
 const maxElement = arr =>  Math.max(...arr);
 console.log(maxElement(arr1));
 
 //task2
-const arr2 = [1, 2, 3]
+const arr2 = [1, 2, 3];
 const copyArray = arr => [...arr];
 console.log(copyArray(arr2));
 
@@ -20,14 +20,14 @@ const regroupObject = (obj) => {
 console.log(regroupObject(obj));
 
 //task5
-const arr5 = [1, 7 ,1, 2, 3, 5, 5, 78, 78, 5, 9, 3, ]
+const arr5 = [1, 7 ,1, 2, 3, 5, 5, 78, 78, 5, 9, 3];
 const findUniqElements = (arr) => {
   return Array.from(new Set(arr));
 }
 console.log(findUniqElements(arr5));
 
 //task6
-const phoneNumber = '0123456789'
+const phoneNumber = '0123456789';
 const hideNumber = (str) => str.slice(-4).padStart(str.length, '*');
 console.log(hideNumber(phoneNumber));
 
@@ -55,7 +55,7 @@ fetchJson('https://api.github.com/users/mkuziv/repos')
 });
 
 //task9
-const repositoryNameAsync = []
+const repositoryNameAsync = [];
 async function fetchJson(url) {
   try {
     const request = await fetch(url);
