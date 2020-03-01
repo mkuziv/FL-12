@@ -1,6 +1,5 @@
 const userList = document.querySelector('.user-list');
 const loader = document.querySelector('.loader');
-// loader.classList.toggle('hidden');
 
 fetch('https://jsonplaceholder.typicode.com/users')
 .then(result => result.json())
@@ -19,8 +18,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     `;
     
     userList.appendChild(userName);  
-  }); 
-  
+  });  
   
   const removeBtn = document.querySelectorAll('.remove');
 
@@ -50,8 +48,6 @@ function deleteUser(userId) {
     loader.classList.toggle('hidden');
   });
 }
-
-
 
 function showForm(userId) {
   loader.classList.toggle('hidden');
