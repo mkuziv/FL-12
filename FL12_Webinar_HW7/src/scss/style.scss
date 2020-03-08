@@ -1,0 +1,52 @@
+@import 'variables';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $textColor;
+  font-size: $textFontSize;
+}
+
+@mixin button($bgColor, $textColor) {
+  font-size: 20px;
+  background: $bgColor;
+  color: $textColor;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+}
+
+.winner, .result {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.game-buttons {
+  @include button($btnColor, $btnTextColor);
+}
+#btn-reset {
+  @include button($btnResetColor, $btnResetTextColor);
+}
+.game-buttons:hover {
+  background-color: darken( $btnColor, 10% );
+  color: lighten( $btnTextColor, 10% )
+}
+#btn-reset:hover {
+  background-color: darken( $btnResetColor, 10% );
+  color: lighten( $btnResetTextColor, 10% )
+}
