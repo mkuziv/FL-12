@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  align-items: center;
+  width: 901px;
+  height: 80px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+.item-date {
+  width: 80px;  
+}
+.item-title {
+  width: 130px;  
+}
+.item-description {
+  width: 500px;  
+}
+.item-duration {
+  width: 100px;  
+}
+img {
+  margin: 0 5px;
+  cursor: pointer;
+}

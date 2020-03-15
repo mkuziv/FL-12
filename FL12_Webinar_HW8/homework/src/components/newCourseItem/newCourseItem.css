@@ -1,0 +1,60 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.new-course {
+  background: #fff;
+  width: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.new-course-item {
+  margin-top: 20px;
+}
+#title, #description {
+  border-radius: 10px;
+  margin-top: 5px;
+  width: 500px;
+  
+}
+#title {
+  height: 40px;
+}
+#description {  
+  height: 100px;
+}
+.time {
+  display: flex; 
+  align-items: space-around;
+  height: 300px;
+  margin-top: 20px;   
+}
+.time-item {
+  margin: 20px 20px;
+}
+#duration,
+#authors,
+#date {
+  margin-top: 5px;
+  border-radius: 10px;
+  width: 230px;
+  height: 40px;
+}
+.btn {
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px 70px;
+}
+.btn-save {
+  background-color: rgb(52, 205, 218);  
+  color: #fff; 
+}
+.btn-cancel {
+  background-color: #fff; 
+  color: grey;  
+}
