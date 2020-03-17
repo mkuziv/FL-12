@@ -1,0 +1,21 @@
+<div class="row">
+  <input type="text" class="search" placeholder="Search">
+  <button class="add-btn" (click)="addUser()">Add New User</button>
+</div>
+
+<ng-template [ngIf]="addUserForm"> 
+  <form class="item" [formGroup]="addForm" [class.danger]="!addForm.valid">
+    <div>
+      <input type="text" class="item-text" formControlName="name" placeholder="Name" value="">
+      <input type="text" class="item-text" formControlName="email" placeholder="Email" value="">
+      <input type="text" class="item-text" formControlName="phone" placeholder="Phone number" value="">      
+    </div>
+
+    <div>
+      <button type="submit" 
+      class="btn" (click)="saveUser()" 
+      [disabled]="!addForm.valid">Save</button>
+      <button class="btn" (click)="discard()">Discard</button>
+    </div>
+  </form>
+</ng-template>

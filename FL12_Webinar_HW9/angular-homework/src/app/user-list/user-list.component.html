@@ -1,0 +1,9 @@
+<app-search (save)="save($event)"></app-search>
+<div *ngFor="let user of users;" >
+  <app-user-item 
+  [user]="user" 
+  (deleteUser)="deleteUser($event)"
+  (editUser)="editUser($event)"
+  (getUserId)= "getUserId($event)"
+  ></app-user-item>
+</div>

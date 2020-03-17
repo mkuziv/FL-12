@@ -1,0 +1,20 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px 20px;
+}
+.item-text {
+  margin: 0 20px;
+}
+.btn{
+  background: #f5f5f5;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
