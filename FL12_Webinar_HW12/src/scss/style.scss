@@ -1,0 +1,55 @@
+@import 'buttons';
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.game-title {
+  display: block;
+  margin-bottom: 30px;  
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;  
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 152px;
+  margin: 0 auto 50px;
+  border: 1px solid #000;
+}
+
+.game-item {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 48px;
+  border: 1px solid #000;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all linear .3s;
+  
+  &:hover{
+    background-color: rgb(221, 216, 216);
+  }
+  &.o {
+    background-color: #4ae94a;
+  }
+  &.x {
+    background-color: #e7f70f;
+  }
+}
+
+.score, 
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.playerX, .playerY {
+  margin: 15px;
+}

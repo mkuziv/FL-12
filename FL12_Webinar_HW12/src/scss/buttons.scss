@@ -1,0 +1,17 @@
+.reset-game, 
+.new-game {
+  display: block;
+  margin: 0 10px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all linear .3s;
+  
+  &:hover{
+    background-color: rgb(158, 153, 153);
+    font-weight: 700;
+    color:rgb(219, 213, 213);
+  }
+}
